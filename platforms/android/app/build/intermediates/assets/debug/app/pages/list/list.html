@@ -1,0 +1,17 @@
+<GridLayout rows="*" columns="*">  
+        <StackLayout>
+        <Image  src="~/images/logo.png" height="80" width="80" align="middle" style="margin-top:50px;margin-left:20px" ></Image>
+        <Label text="User Data" fontSize="24"  style.textAlignment="center" style.textColor="color:rebeccapurple;"></Label>
+        <ListView  row="0" [items]="dataItems" class="list-group">
+            <ng-template nsTemplateKey="red" let-item="item" let-i="index" let-odd="odd" let-even="even">
+                <GridLayout class="list-group-item">
+                    <StackLayout>
+                    <Label [text]="'User Id - ' + item.id"  class="font-weight-normal m-5" ></Label>
+                    <Label [text]="'First Name - ' + item.first_name" class="font-weight-normal m-5" ></Label>
+                    <Label [text]="'Last Name - ' + item.last_name"  class="font-weight-normal m-5" ></Label>
+                   </StackLayout>
+                </GridLayout>
+            </ng-template>
+        </ListView>
+        </StackLayout>
+    </GridLayout>

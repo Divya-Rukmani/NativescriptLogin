@@ -1,0 +1,19 @@
+
+	<StackLayout class="form">
+		<Label class="header" text="LOGIN"></Label>
+		<Image class="logo" src="~/images/logo.png"></Image>
+		<GridLayout rows="auto, auto, auto">
+			<StackLayout row="0" class="input-field">
+				<TextField  class="input" hint="Email"  keyboardType="email" autocorrect="false" autocapitalizationType="none"  returnKeyType="next"></TextField>
+				<StackLayout class="hr-light"></StackLayout>
+			</StackLayout>
+
+			<StackLayout row="1" class="input-field">
+				<TextField  secure="true" class="input"  hint="Password" secure="true"  returnKeyType="next" ></TextField>
+				<StackLayout class="hr-light"></StackLayout>
+			</StackLayout>
+			<ActivityIndicator rowSpan="3" ></ActivityIndicator>
+		</GridLayout>
+		<Button text="Sign in" (tap)="submit()"></Button>
+	</StackLayout>
+
