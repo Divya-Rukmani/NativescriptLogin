@@ -8,21 +8,16 @@ import {Page} from "ui/page";
 })
 export class LoginComponent {
   // Your TypeScript logic goes here
-  isLoggingIn = true;
 
   constructor(
     private _router: Router, page: Page) {
+    // to hide your toolbar  
     page.actionBarHidden = true;
   }
 
   submit() {
+    //to naviagte to list view
     this._router.navigate(["/list"]);
-  }
-  toggleDisplay() {
-    this.isLoggingIn = !this.isLoggingIn;
-  }
-  login() {
-
   }
   
 }
