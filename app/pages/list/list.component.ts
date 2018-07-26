@@ -11,7 +11,7 @@ import {Page} from "ui/page";
 })
 export class ListComponent  implements OnInit  {
   
- dataItems: ObservableArray<User>;
+ dataItems: ObservableArray<User>; //to store reponse in array
  public serverUrl = "https://reqres.in/api/users?page=2";
  constructor(page: Page) {
   page.actionBarHidden = true;
@@ -25,7 +25,7 @@ export class ListComponent  implements OnInit  {
     for (var i = 0; i < r.data.length; i++) {
            array.push(new User(r.data[i].id, r.data[i].first_name, r.data[i].last_name,r.data[i].avatar));
         }
-    this.dataItems=array;
+    this.dataItems=array;// bind the values to the array 
   });
   }
 
